@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#e8f5e9" />
+    <meta name="description" content="Lee Zishan Ling — about and contact." />
+    <title>Lee Zishan Ling</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,520;9..144,640&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="book" id="book">
+      <header class="topbar">
+        <p class="topbar-name" id="topName"></p>
+        <p class="topbar-page" id="topPage">About</p>
+      </header>
+
+      <div class="viewport" id="viewport">
+        <div class="track" id="track">
+          <!-- About -->
+          <section class="page page-about" id="pageAbout" aria-label="About me">
+            <div class="portrait reveal" data-delay="0">
+              <img id="photo" alt="" hidden />
+              <div class="portrait-fallback" id="photoFallback">LZ</div>
+            </div>
+            <h1 class="name reveal" data-delay="1" id="fullName"></h1>
+            <p class="headline reveal" data-delay="2" id="headline"></p>
+            <p class="location reveal" data-delay="3" id="location"></p>
+
+            <section class="block reveal" data-delay="4">
+              <h2>Achievements</h2>
+              <ul class="list" id="achievements"></ul>
+            </section>
+
+            <section class="block reveal" data-delay="5">
+              <h2>Specialties</h2>
+              <ul class="chips" id="specialties"></ul>
+            </section>
+
+            <section class="block reveal" data-delay="6">
+              <h2>Hobbies</h2>
+              <ul class="chips" id="hobbies"></ul>
+            </section>
+          </section>
+
+          <!-- Contact -->
+          <section
+            class="page page-contact"
+            id="pageContact"
+            aria-label="Contact me"
+          >
+            <h1 class="name reveal" data-delay="0">Contact</h1>
+            <p class="headline reveal" data-delay="1">
+              Tap a link. It opens in a new tab.
+            </p>
+            <ul class="socials" id="socials"></ul>
+            <div class="wechat-card reveal" data-delay="7" id="wechatCard">
+              <p class="wechat-title" id="wechatTitle"></p>
+              <p class="wechat-hint" id="wechatHint"></p>
+              <img id="wechatImg" alt="WeChat QR code" hidden />
+              <p class="wechat-fallback" id="wechatFallback">
+                Add wechat.png next to this page, then set the path in
+                content.js
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <button
+          type="button"
+          class="edge-tab edge-right"
+          id="tabContact"
+          aria-label="Go to contact"
+        >
+          <span>Contact me</span>
+        </button>
+        <button
+          type="button"
+          class="edge-tab edge-left"
+          id="tabAbout"
+          aria-label="Go to about"
+          hidden
+        >
+          <span>About me</span>
+        </button>
+      </div>
+
+      <nav class="dots" aria-label="Pages">
+        <button type="button" class="dot is-active" data-page="0" aria-label="About"></button>
+        <button type="button" class="dot" data-page="1" aria-label="Contact"></button>
+      </nav>
+    </main>
+
+    <script src="content.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
